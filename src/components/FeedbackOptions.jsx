@@ -1,4 +1,5 @@
 import Section from 'components/Section';
+import PropTypes from 'prop-types';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
@@ -28,5 +29,8 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
       </div>
     </Section>
   );
+};
+FeedbackOptions.propTypes = {
+  onLeaveFeedback: PropTypes.func,
 };
 export default FeedbackOptions;

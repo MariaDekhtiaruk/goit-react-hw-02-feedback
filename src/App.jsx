@@ -1,3 +1,4 @@
+import './App.css';
 import FeedbackOptions from 'components/FeedbackOptions';
 import Statistics from 'components/Statistics';
 import { Component } from 'react';
