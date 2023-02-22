@@ -3,27 +3,16 @@ import PropTypes from 'prop-types';
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <div className="button-wrap">
-      <button
-        type="button"
-        className="button"
-        onClick={() => onLeaveFeedback('good')}
-      >
-        Good
-      </button>
-      <button
-        type="button"
-        className="button"
-        onClick={() => onLeaveFeedback('neutral')}
-      >
-        Neutral
-      </button>
-      <button
-        type="button"
-        className="button"
-        onClick={() => onLeaveFeedback('bad')}
-      >
-        Bad
-      </button>
+      {options.map(item => (
+        <button
+          key={item}
+          type="button"
+          className="button"
+          onClick={() => onLeaveFeedback(item)}
+        >
+          {item.charAt(0).toUpperCase() + item.slice(1)}
+        </button>
+      ))}
     </div>
   );
 };

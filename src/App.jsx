@@ -32,7 +32,10 @@ export class App extends Component {
     return (
       <div className="App">
         <Section title={'Please leave feedback'}>
-          <FeedbackOptions onLeaveFeedback={this.onLeaveFeedbackHandler} />
+          <FeedbackOptions
+            options={['good', 'neutral', 'bad']}
+            onLeaveFeedback={this.onLeaveFeedbackHandler}
+          />
         </Section>
 
         <Section title={'Statictics'}>
